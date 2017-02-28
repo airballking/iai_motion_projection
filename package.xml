@@ -13,4 +13,7 @@
   <buildtool_depend>catkin</buildtool_depend>
   <depend>rospy</depend>
   <depend>iai_naive_kinematics_sim</depend>
+  <depend>std_msgs</depend>
+  <depend>message_generation</depend>
+  <depend>message_runtime</depend>
 </package>

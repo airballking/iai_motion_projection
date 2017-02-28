@@ -1,0 +1,4 @@
+duration period
+uint64 iterations
+---
+bool success

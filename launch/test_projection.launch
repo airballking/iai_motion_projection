@@ -1,0 +1,6 @@
+<launch>
+  <node pkg="iai_motion_projection" type="projection_manager.py" 
+        name="projection_manager" output="screen" >
+    <rosparam command="load" file="$(find iai_motion_projection)/config/test_projection.yaml" />
+  </node>
+</launch>
