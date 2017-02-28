@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>iai_motion_projection</name>
+  <version>0.1.0</version>
+  <description>
+    Provides functionality to make motion projections distributed over several ROS nodes.
+  </description>
+
+  <maintainer email="georg.bartels@cs.uni-bremen.de">Georg Bartels</maintainer>
+  <author email="georg.bartels@cs.uni-bremen.de">Georg Bartels</author>
+  <license>GPLv2</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>rospy</depend>
+  <depend>iai_naive_kinematics_sim</depend>
+</package>
