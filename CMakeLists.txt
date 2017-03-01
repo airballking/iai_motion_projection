@@ -13,7 +13,7 @@ add_service_files(DIRECTORY srv
   FILES
   TriggerProjection.srv)
 
-generate_messages()
+generate_messages(DEPENDENCIES sensor_msgs)
 
 catkin_package(
  CATKIN_DEPENDS iai_naive_kinematics_sim rospy std_msgs message_runtime)

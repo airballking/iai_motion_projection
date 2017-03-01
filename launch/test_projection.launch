@@ -1,6 +1,22 @@
 <launch>
+  <param name="robot_description"
+    textfile="$(find iai_naive_kinematics_sim)/test_data/test_robot.urdf" />
+
+  <node pkg="iai_naive_kinematics_sim" type="simulator"
+        name="simulator" output="screen">
+    <rosparam command="load"
+        file="$(find iai_naive_kinematics_sim)/test_data/test_projection_config.yaml" />
+    <remap from="~joint_states" to="joint_states" />
+    <remap from="~projection_clock" to="/projection_manager/projection_clock" />
+    <remap from="~commands" to="joint_states" />
+  </node>
+
+
   <node pkg="iai_motion_projection" type="projection_manager.py" 
         name="projection_manager" output="screen" >
     <rosparam command="load" file="$(find iai_motion_projection)/config/test_projection.yaml" />
+    <remap from="~set_joint_states" to="/simulator/set_joint_states" />
+    <remap from="~iteration_completed" to="/simulator/commands_received" />
   </node>
+
 </launch>

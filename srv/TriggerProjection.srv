@@ -1,4 +1,5 @@
 duration period
 uint64 iterations
+sensor_msgs/JointState state
 ---
 bool success
